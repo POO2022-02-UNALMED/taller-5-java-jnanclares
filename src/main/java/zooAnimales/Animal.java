@@ -73,7 +73,7 @@ public class Animal {
         this.zona = zona;
     }
 
-    // Métodos
+    // Metodos
     String movimiento() {
         return "desplazarse";
     }

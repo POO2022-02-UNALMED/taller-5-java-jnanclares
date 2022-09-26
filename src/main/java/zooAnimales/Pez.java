@@ -47,7 +47,7 @@ public class Pez extends Animal{
     }
 
 
-    // Métodos
+    // Metodos
 
     public static int cantidadPeces(){
         return Pez.bacalaos+Pez.salmones;

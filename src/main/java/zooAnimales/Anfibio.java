@@ -45,7 +45,7 @@ public class Anfibio extends Animal{
         this.venenoso = venenoso;
     }
 
-    // Métodos
+    // Metodos
 
     public static int cantidadAnfibios(){
         return Anfibio.ranas+Anfibio.salamandras;

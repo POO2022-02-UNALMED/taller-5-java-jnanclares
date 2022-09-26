@@ -46,7 +46,7 @@ public class Reptil extends Animal{
     }
 
 
-    // Métodos
+    // Metodos
 
     public static int cantidadReptiles(){
         return Reptil.serpientes+Reptil.iguanas;

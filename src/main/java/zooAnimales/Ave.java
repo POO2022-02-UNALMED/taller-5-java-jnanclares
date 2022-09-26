@@ -37,7 +37,7 @@ public class Ave extends Animal{
     }
 
 
-    // Métodos
+    // Metodos
 
     public static int cantidadAves(){
         return Ave.aguilas+Ave.halcones;

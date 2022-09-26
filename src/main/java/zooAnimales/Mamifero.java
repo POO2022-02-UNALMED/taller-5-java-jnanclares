@@ -48,7 +48,7 @@ public class Mamifero extends Animal {
     }
 
 
-    // Métodos
+    // Metodos
 
     public static int cantidadMamiferos(){
         return Mamifero.caballos+Mamifero.leones;

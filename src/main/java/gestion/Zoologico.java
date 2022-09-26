@@ -41,7 +41,7 @@ public class Zoologico {
         this.zonas = zonas;
     }
 
-    //Métodos
+    //Metodos
 
     void agregarZonas(Zona zona){
         this.zonas.add(zona);

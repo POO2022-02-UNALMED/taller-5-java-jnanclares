@@ -42,7 +42,7 @@ public class Zona {
     public ArrayList<Animal> getAnimales() {
         return animales;
     }
-    //Métodos
+    //Metodos
 
     void agregarAnimales(Animal animal){
         this.animales.add(animal);
