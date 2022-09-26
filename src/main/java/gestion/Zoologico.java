@@ -45,11 +45,11 @@ public class Zoologico {
 
     //Metodos
 
-    void agregarZonas(Zona zona){
+    public void agregarZonas(Zona zona){
         Zoologico.zonas.add(zona);
     }
 
-    int cantidadTotalAnimales(){
+    public int cantidadTotalAnimales(){
         return zonas.get(0).cantidadAnimales()+ zonas.get(1).cantidadAnimales();
     }
 
