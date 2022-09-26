@@ -10,10 +10,10 @@ public class Animal {
     private int edad;
     private String habitat;
     private String genero;
-    private Zona zona;
+    private static Zona zona;
 
     //Constructores
-    Animal(String nombre, int edad, String habitat, String genero) {
+    public Animal(String nombre, int edad, String habitat, String genero) {
         this.nombre = nombre;
         this.edad = edad;
         this.habitat = habitat;
@@ -21,16 +21,14 @@ public class Animal {
         this.totalAnimales++;
     }
 
-    public Animal() {}
+    public Animal() {
+        this.totalAnimales++;
+    }
 
     // Getter & Setter
 
     public int getTotalAnimales() {
         return totalAnimales;
-    }
-
-    public void setTotalAnimales(int totalAnimales) {
-        this.totalAnimales = totalAnimales;
     }
 
     public String getNombre() {
@@ -70,16 +68,16 @@ public class Animal {
     }
 
     public void setZona(Zona zona) {
-        this.zona = zona;
+        Animal.zona = zona;
     }
 
     // Metodos
-    String movimiento() {
+    public String movimiento() {
         return "desplazarse";
     }
 
-    void totalPorTipo(){
-        String total = "Mamiferos: " + Mamifero.cantidadMamiferos() +"\n"+
+    public static String totalPorTipo(){
+        return "Mamiferos: " + Mamifero.cantidadMamiferos() +"\n"+
                 "Ave: " + Ave.cantidadAves() +"\n"+
                 "Reptil: " + Reptil.cantidadReptiles() +"\n"+
                 "Pez: " + Pez.cantidadPeces() +"\n"+
@@ -89,10 +87,13 @@ public class Animal {
 
     @Override
     public String toString() {
-        if (this.zona.getNombre() != null){
-            return "Mi nombre es " + getNombre() + ", tengo una edad de " + getEdad() + ", habito en " + getHabitat() + " y mi genero es " + getGenero() +
-                ", la zona en que me ubico es " + zona.getNombre() + ", en el zoo " + zona.getZoo().getNombre();
+        if (Animal.zona == null){
+            return "Mi nombre es " + getNombre() + ", tengo una edad de " + getEdad() + ", habito en " + getHabitat() + " y mi genero es " + getGenero();
         }
-        return "Mi nombre es " + getNombre() + ", tengo una edad de " + getEdad() + ", habito en " + getHabitat() + " y mi genero es " + getGenero();
+        else {
+            return "Mi nombre es " + getNombre() + ", tengo una edad de " + getEdad() + ", habito en " + getHabitat() + " y mi genero es " + getGenero() +
+                    ", la zona en que me ubico es " + zona.getNombre() + ", en el zoo " + zona.getZoo().getNombre();
+        }
+
     }
 }

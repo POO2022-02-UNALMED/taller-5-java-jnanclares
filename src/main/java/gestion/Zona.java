@@ -9,7 +9,7 @@ public class Zona {
     // Atributos
     private String nombre;
     private Zoologico zoo;
-    private ArrayList<Animal> animales;
+    private ArrayList<Animal> animales = new ArrayList<Animal>();
 
 
     // Constructores
@@ -45,11 +45,11 @@ public class Zona {
     //Metodos
 
     void agregarAnimales(Animal animal){
-        this.animales.add(animal);
+        animales.add(animal);
     }
 
     int cantidadAnimales(){
-        return this.animales.size();
+        return animales.size();
     }
 
 }

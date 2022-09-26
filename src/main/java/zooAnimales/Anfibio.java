@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Anfibio extends Animal{
     // Atributos
-    private ArrayList<Anfibio> listado = new ArrayList<Anfibio>();
+    private static ArrayList<Anfibio> listado = new ArrayList<Anfibio>();
     public static int ranas;
     public static int salamandras;
     private String colorPiel;
@@ -16,11 +16,13 @@ public class Anfibio extends Animal{
 
     public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso) {
         super(nombre, edad, habitat, genero);
-        this.listado.add(this);
+        this.colorPiel = colorPiel;
+        this.venenoso = venenoso;
+        listado.add(this);
     }
 
     public Anfibio() {
-        this.listado.add(this);
+        listado.add(this);
     }
 
     // Getter & Setter
@@ -30,7 +32,7 @@ public class Anfibio extends Animal{
     }
 
     public String getColorPiel() {
-        return colorPiel;
+        return this.colorPiel;
     }
 
     public void setColorPiel(String colorPiel) {
@@ -48,7 +50,7 @@ public class Anfibio extends Animal{
     // Metodos
 
     public static int cantidadAnfibios(){
-        return Anfibio.ranas+Anfibio.salamandras;
+        return listado.size();
     }
 
     public  String movimiento(){
@@ -56,12 +58,12 @@ public class Anfibio extends Animal{
         return "saltar";
     }
 
-    public Anfibio crearRana(String nombre, int edad, String genero){
+    public static Anfibio crearRana(String nombre, int edad, String genero){
         Anfibio.ranas++;
         return new Anfibio(nombre, edad, "selva", genero, "rojo", true);
     }
 
-    public Anfibio crearSalamandra(String nombre, int edad, String genero){
+    public static Anfibio crearSalamandra(String nombre, int edad, String genero){
         Anfibio.salamandras++;
         return new Anfibio(nombre, edad, "selva", genero, "negro y amarillo", false);
     }
