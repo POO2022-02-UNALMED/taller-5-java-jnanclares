@@ -8,6 +8,8 @@ public class Mamifero extends Animal {
     // Atributos
     private static ArrayList<Mamifero> listado = new ArrayList<Mamifero>();
 
+    public static int mamiferos;
+
     public static int caballos;
     public static int leones;
     private boolean pelaje;
@@ -20,10 +22,12 @@ public class Mamifero extends Animal {
         this.pelaje = pelaje;
         this.patas = patas;
         listado.add(this);
+        mamiferos++;
     }
 
     public Mamifero(){
         listado.add(this);
+        mamiferos++;
     }
 
     // Getter & Setter
@@ -53,7 +57,7 @@ public class Mamifero extends Animal {
     // Metodos
 
     public static int cantidadMamiferos(){
-        return listado.size();
+        return mamiferos;
     }
 
     public static Mamifero crearCaballo(String nombre, int edad, String genero){

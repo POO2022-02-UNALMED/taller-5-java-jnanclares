@@ -11,6 +11,8 @@ public class Reptil extends Animal{
     public static int serpientes;
     private String colorEscamas;
     private int largoCola;
+    public static int reptiles;
+
 
     // Constructores
 
@@ -19,10 +21,12 @@ public class Reptil extends Animal{
         this.colorEscamas = colorEscamas;
         this.largoCola = largoCola;
         listado.add(this);
+        reptiles++;
     }
 
     public Reptil(){
         listado.add(this);
+        reptiles++;
     }
 
     // Getter & Setter
@@ -51,7 +55,7 @@ public class Reptil extends Animal{
     // Metodos
 
     public static int cantidadReptiles(){
-        return listado.size();
+        return reptiles;
 
     }
 

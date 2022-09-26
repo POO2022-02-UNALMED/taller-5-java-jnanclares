@@ -8,6 +8,9 @@ public class Ave extends Animal{
     // Atributos
     private static ArrayList<Ave> listado = new ArrayList<Ave>();
     public static int halcones;
+
+    public static int aves;
+
     public static int aguilas;
     private String colorPlumas;
 
@@ -16,10 +19,12 @@ public class Ave extends Animal{
         super(nombre, edad, habitat, genero);
         this.colorPlumas = colorPlumas;
         listado.add(this);
+        aves++;
     }
 
     public Ave(){
         listado.add(this);
+        aves++;
     }
 
     //Getter & Setter
@@ -41,7 +46,7 @@ public class Ave extends Animal{
     // Metodos
 
     public static int cantidadAves(){
-        return listado.size();
+        return aves;
     }
 
     public String movimiento(){

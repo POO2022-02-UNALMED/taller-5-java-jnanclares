@@ -11,6 +11,8 @@ public class Anfibio extends Animal{
     public static int salamandras;
     private String colorPiel;
     private boolean venenoso;
+    public static int anfibios;
+
 
     // Constructores
 
@@ -19,10 +21,12 @@ public class Anfibio extends Animal{
         this.colorPiel = colorPiel;
         this.venenoso = venenoso;
         listado.add(this);
+        anfibios++;
     }
 
     public Anfibio() {
         listado.add(this);
+        anfibios++;
     }
 
     // Getter & Setter
@@ -50,7 +54,7 @@ public class Anfibio extends Animal{
     // Metodos
 
     public static int cantidadAnfibios(){
-        return listado.size();
+        return anfibios;
     }
 
     public  String movimiento(){
