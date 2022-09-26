@@ -10,7 +10,7 @@ public class Zoologico {
     private String ubicacion;
     private static ArrayList<Zona> zonas = new ArrayList<Zona>();
 
-    Zoologico(String nombre, String ubicacion){
+    public Zoologico(String nombre, String ubicacion){
         this.nombre = nombre;
         this.ubicacion = ubicacion;
     }

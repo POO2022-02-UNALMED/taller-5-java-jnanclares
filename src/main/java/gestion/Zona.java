@@ -14,7 +14,7 @@ public class Zona {
 
     // Constructores
 
-    Zona(String nombre, Zoologico zoo){
+    public Zona(String nombre, Zoologico zoo){
         this.nombre = nombre;
         this.zoo = zoo;
     }
